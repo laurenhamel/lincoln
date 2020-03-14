@@ -1,0 +1,5 @@
+# Turn on rewrites.
+RewriteEngine on
+
+# Direct all traffic to the index page.
+RewriteRule (.*) index.php [L]

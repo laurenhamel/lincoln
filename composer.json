@@ -1,0 +1,29 @@
+{
+  "name": "laurenhamel/lincoln",
+  "description": "A link in bio launchpad powered by Airtable",
+  "version": "1.0.0",
+  "keywords": [
+    "link-in-bio",
+    "link-to",
+    "airtable"
+  ],
+  "homepage": "https://github.com/laurenhamel/lincoln",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lauren Hamel",
+      "email": "lauren.hamel@outlook.com",
+      "homepage": "http://laurenhamel.me",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/laurenhamel/lincoln/issues",
+    "source": "https://github.com/laurenhamel/lincoln"
+  },
+  "require": {
+    "twig/twig": "^3.0",
+    "sleiman/airtable-php": "^2.3",
+    "vlucas/phpdotenv": "^4.1"
+  }
+}
