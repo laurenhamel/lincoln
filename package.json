@@ -1,6 +1,6 @@
 {
   "name": "lincoln",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A link in bio launchpad powered by Airtable",
   "main": "index.js",
   "scripts": {
