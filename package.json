@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "A link in bio launchpad powered by Airtable",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "link-in-bio",
     "link-to",
     "airtable"
   ],
+  "repository": "github:laurenhamel/lincoln",
+  "homepage": "https://github.com/laurenhamel/lincoln",
+  "bugs": "https://github.com/laurenhamel/issues",
   "author": "Lauren Hamel",
   "license": "MIT",
   "devDependencies": {
