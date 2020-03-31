@@ -1,0 +1,13 @@
+// Use dependencies.
+// ...
+
+// Define styles.
+.preview {
+  $selector: &;
+  &-content {
+    &-image {}
+    &-title {}
+    &-link {}
+    &-close {}
+  }
+}

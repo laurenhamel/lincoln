@@ -1,0 +1,27 @@
+<template id="lincoln-about">
+  <section class="about" v-show="showing" :class="{ 'is-active': showing }">
+    <div class="about-content">
+      <img class="about-content-image" src="{{ path.assets }}/{{ brand.banner }}">
+      <span class="about-content-title">{{ brand.name }}</span>
+      {% if brand.bio %}
+        <p class="about-content-description">{{ brand.bio }}</p>
+      {% endif %}
+      <div class="about-content-links">
+        <a href="{{ brand.website }}" class="about-content-links-link">
+          <span class="about-content-links-link-label">Website</span>
+          <span class="about-content-links-link-icon icon fas fa-external-link-alt"></span>
+        </a>
+        {% for social in brand.socials %}
+          <a href="{{ social.url }}" class="about-content-links-link">
+            <span class="about-content-links-link-label">{{ social.name }}</span>
+            <span class="about-content-links-link-icon icon fab fa-{{ social.icon }}"></span>
+          </a>
+        {% endfor %}
+      </div>
+      <button class="about-content-close" @click="close">
+        <span class="about-content-close-label">Close</span>
+        <span class="about-content-close-icon icon fas fa-times"></span>
+      </button>
+    </div>
+  </section>
+</template>

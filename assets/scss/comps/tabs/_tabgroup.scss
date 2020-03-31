@@ -16,6 +16,7 @@
   border-top: vars.$tab-border solid colors.$tab-border-inactive;
   height: vars.$tab-size;
   background-color: colors.$tab-background;
-  color: colors.$tab-foreground;
+  box-shadow: vars.$shadow-l;
+  z-index: 1;
   @include layout.max-width;
 }

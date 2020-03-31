@@ -4,4 +4,6 @@
 // Define styles.
 .tabs.-layout {
   $selector: &;
+  position: sticky;
+  top: 0;
 }

@@ -22,6 +22,11 @@ $shadow: $magenta;
 // Body
 $body-background: rgba($white, .5);
 
+// Dialog
+$dialog-overlay: rgba($black, .75);
+$dialog-background: $white;
+$dialog-foreground: $text-dark;
+
 // Gradient
 $gradient-start: $turquoise;
 $gradient-end: $gold;
@@ -36,8 +41,14 @@ $card-border: $grey;
 $intro-thumbnail: $white;
 
 // Tabs
-$tab-background: rgba($white, .75);
-$tab-foreground: $text-dark;
-$tab-icon: lighten($text-dark, 25%);
+$tab-background: $white;
+$tab-foreground-active: $text-dark;
+$tab-foreground-inactive: $grey;
 $tab-border-inactive: $grey;
 $tab-border-active: $purple;
+
+// Anchors
+$anchor-l-normal: $green;
+$anchor-l-hover: darken($green, 50%);
+$anchor-d-normal: rgba($white, .8);
+$anchor-d-hover: $white;

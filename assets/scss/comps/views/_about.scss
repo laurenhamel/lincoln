@@ -1,0 +1,14 @@
+// Use dependencies.
+// ...
+
+// Define styles.
+.about {
+  $selector: &;
+  &-content {
+    &-image {}
+    &-title {}
+    &-description {}
+    &-link {}
+    &-close {}
+  }
+}

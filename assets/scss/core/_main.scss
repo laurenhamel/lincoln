@@ -30,6 +30,7 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
+  line-height: vars.$line-height;
   @include font.text;
   @if(settings.$USE_GRADIENT_BACKGROUND ) {
     color: colors.$gradient-foreground;
@@ -51,6 +52,8 @@ a {
 button,
 a {
   appearance: none;
+  background: none;
+  border: none;
 }
 
 @for $i from 1 through 6 {

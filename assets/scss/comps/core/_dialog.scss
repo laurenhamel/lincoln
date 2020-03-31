@@ -1,0 +1,102 @@
+// Use dependencies.
+@use '@utils/layout' as layout;
+@use '@utils/breakpoint' as breakpoint;
+@use '@utils/image' as image;
+@use '@utils/font' as font;
+@use '@config/vars' as vars;
+@use '@config/colors' as colors;
+
+// Define styles.
+.dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  z-index: 2;
+  > * {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$dialog-overlay;
+    @include layout.max-width;
+    @include breakpoint.breakpoint-before-layout {
+      @include layout.padding-x(vars.$rhythm-x);
+    };
+    > [class*="-content"] {
+      background-color: colors.$dialog-background;
+      color: colors.$dialog-foreground;
+      box-shadow: vars.$shadow-d;
+      padding: vars.$rhythm-y vars.$rhythm-x;
+      border-radius: vars.$radius-m;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      > [class*="-content-image"] {
+        width: calc(100% + #{vars.$rhythm-x * 2});
+        min-height: vars.$dialog-image-min;
+        max-height: vars.$dialog-image-max;
+        @include layout.margin-x(vars.$rhythm-x * -1);
+        margin-top: (vars.$rhythm-y * -1);
+        margin-bottom: vars.$rhythm-y;
+        @include image.fit;
+      }
+      > [class*="-content-title"] {
+        @include font.heading(2);
+      }
+      > [class*="-content-description"] {
+        margin-top: (vars.$rhythm-y / 4);
+        @include font.text;
+      }
+      > [class*="-content-links"] {
+        margin-top: (vars.$rhythm-y / 2);
+        display: flex;
+        > [class*="-content-links-link"] {
+          display: inline-flex;
+          align-items: center;
+          transition: vars.$transition-all;
+          width: max-content;
+          margin-right: vars.$rhythm-x;
+          @include layout.padding-y(5px);
+          @include font.text('anchor');
+          > [class*="-content-links-link-icon"] {
+            &:last-child {
+              margin-left: (vars.$rhythm-x / 2);
+            }
+            &:first-child {
+              margin-right: (vars.$rhythm-x / 2);
+            }
+          }
+        }
+      }
+      > [class*="-content-close"] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        position: absolute;
+        padding: 5px (vars.$rhythm-x / 2);
+        transition: vars.$transition-all;
+        right: (vars.$rhythm-x / 2);
+        top: (vars.$rhythm-x / 2);
+        z-index: 3;
+        text-shadow: vars.$shadow-l;
+        cursor: pointer;
+        @include font.text('anchor', 'dark');
+        > [class*="-content-close-icon"] {
+          &:last-child {
+            margin-left: (vars.$rhythm-x / 2);
+          }
+          &:first-child {
+            margin-right: (vars.$rhythm-x / 2);
+          }
+        }
+      }
+    }
+  }
+}

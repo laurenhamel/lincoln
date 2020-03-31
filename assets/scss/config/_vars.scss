@@ -1,6 +1,9 @@
 // Use dependencies.
 @use '@config/colors' as colors;
 
+// Define line height.
+$line-height: 1.75;
+
 // Define breakpoints.
 $breakpoint-s: max-width 400px;
 $breakpoint-m: 900px 401px;
@@ -40,3 +43,7 @@ $card-list-max: 150px;
 // Define tabs.
 $tab-border: $width-m;
 $tab-size: 60px;
+
+// Define dialog.
+$dialog-image-min: 200px;
+$dialog-image-max: 400px;

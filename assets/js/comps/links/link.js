@@ -43,9 +43,11 @@ module.exports = {
 
       event.preventDefault();
 
-      this.$bus.$emit('preview', _.merge(this.$props, {
-        event: 'preview'
-      }));
+      this.$bus.$emit('preview', {
+        event: 'preview',
+        visible: true,
+        link: this.$props
+      });
 
     }
 

@@ -1,0 +1,18 @@
+<template id="lincoln-preview">
+  <section class="preview" v-show="previewing" :class="{ 'is-active': previewing }">
+    <div class="preview-content" v-if="link">
+      <img class="preview-content-image" :src="link.image || link.placeholder">
+      <span class="preview-content-title" v-html="link.label"></span>
+      <div class="preview-content-links">
+        <a :href="link.link" class="preview-content-links-link">
+          <span class="preview-content-links-link-label">Visit Link</span>
+          <span class="preview-content-links-link-icon icon fas fa-external-link-alt"></span>
+        </a>
+      </div>
+      <button class="preview-content-close" @click="close">
+        <span class="preview-content-close-label">Close</span>
+        <span class="preview-content-close-icon icon fas fa-times"></span>
+      </button>
+    </div>
+  </section>
+</template>

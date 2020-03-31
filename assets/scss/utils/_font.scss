@@ -3,6 +3,7 @@
 @use '@utils/list' as list;
 @use '@utils/string' as string;
 @use '@config/fonts' as fonts;
+@use '@config/colors' as colors;
 
 // Create a size scale.
 @function scale ($min, $max, $stops: 3, $sort: 'ASC') {
@@ -41,7 +42,7 @@
 }
 
 // Define text font styles.
-@mixin text($style: 'body') {
+@mixin text($style: 'body', $mode: null) {
   $_weights: (
     'thin': 100,
     'extra-light': 200,
@@ -64,5 +65,23 @@
     font-weight: map.get($_weights, fonts.$tab-weight);
     font-size: fonts.$tab-size;
     text-transform: uppercase;
+  }
+  @else if($style == 'anchor') {
+    $mode: if($mode, $mode, 'light');
+    $normal: if($mode == 'dark', colors.$anchor-d-normal, colors.$anchor-l-normal);
+    $hover: if($mode == 'dark', colors.$anchor-d-hover, colors.$anchor-l-hover);
+    font-family: fonts.$anchor-font;
+    font-weight: map.get($_weights, fonts.$anchor-weight);
+    font-size: fonts.$anchor-size;
+    text-transform: uppercase;
+    &,
+    &:visited {
+      color: $normal;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $hover;
+    }
   }
 }

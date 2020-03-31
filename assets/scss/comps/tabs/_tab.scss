@@ -15,13 +15,14 @@
   transition: vars.$transition-all;
   height: vars.$tab-size;
   margin-top: (vars.$tab-border * -1);
+  color: colors.$tab-foreground-inactive;
   cursor: pointer;
   &.is-active {
     border-top: vars.$tab-border solid colors.$tab-border-active;
+    color: colors.$tab-foreground-active;
   }
   &-icon {
     margin-right: (vars.$rhythm-x / 2);
-    color: colors.$tab-icon;
   }
   &-text {}
 }
