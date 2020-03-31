@@ -20,6 +20,13 @@ npm install && composer install
 
 - Setup your `.env` file. See [`.env.example`](https://github.com/laurenhamel/lincoln/blob/master/.env.example) for help.
 
+- Further customize your project by:
+
+  - Replacing any default images found in `assets/images` with your own.
+  - Adding your brand details in `assets/data/brand.json`.
+  - Tweaking the project settings in `assets/data/settings.json`.
+  - Configuring your project's styles in `assets/scss/config/*.scss`;
+
 - Build the project.
 
 ```bash
