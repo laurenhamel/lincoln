@@ -6,15 +6,15 @@
 
 - Clone the repository.
 
-```bash
-git clone git@github.com:laurenhamel/lincoln.git
-```
+  ```bash
+  git clone git@github.com:laurenhamel/lincoln.git
+  ```
 
 - Install dependencies.
 
-```bash
-npm install && composer install
-```
+  ```bash
+  npm install && composer install
+  ```
 
 - Create an [AirTable](https://airtable.com/) base to store your links. If using the default configurations, then make sure your AirTable contains columns named `Title` and `Link` for the link name and URL, respectively.
 
@@ -29,12 +29,12 @@ npm install && composer install
 
 - Build the project.
 
-```bash
-# For development environments:
-grunt build:dev
+  ```bash
+  # For development environments:
+  grunt build:dev
 
-# For production environments:
-grunt build:prod
-```
+  # For production environments:
+  grunt build:prod
+  ```
 
 - Finally, add links into your AirTable base, include a link to a hosted version of your project in all your socials, and enjoy!
