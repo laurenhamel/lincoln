@@ -1,0 +1,43 @@
+// Define brand colors.
+$white: #ffffff;
+$gold: #bfae48;
+$green: #5fad41;
+$turquoise: #2d936c;
+$purple: #391463;
+$magenta: #3a0842;
+$black: #333333;
+$grey: #9f9f9f;
+
+// Configure color scheme.
+
+// Text
+$text-light: $white;
+$text-dark: $black;
+
+// General
+$background: $turquoise;
+$foreground: $text-light;
+$shadow: $magenta;
+
+// Gradient
+$gradient-start: $turquoise;
+$gradient-end: $gold;
+$gradient-foreground: $text-light;
+
+// Cards
+$card-background: $white;
+$card-foreground: $text-dark;
+$card-border: $grey;
+
+// Intro
+$intro-thumbnail: $white;
+
+// Links
+$links-background: rgba($white, .5);
+
+// Tabs
+$tab-background: rgba($white, .75);
+$tab-foreground: $text-dark;
+$tab-icon: lighten($text-dark, 25%);
+$tab-border-inactive: $grey;
+$tab-border-active: $purple;

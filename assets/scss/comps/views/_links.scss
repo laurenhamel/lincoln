@@ -1,0 +1,14 @@
+// Use dependencies.
+@use '@config/colors' as colors;
+@use '@config/vars' as vars;
+@use '@utils/layout' as layout;
+
+// Define styles.
+.links {
+  $selector: &;
+  list-style-type: none;
+  background-color: colors.$links-background;
+  margin: 0;
+  padding: vars.$rhythm-x 0;
+  @include layout.max-width;
+}

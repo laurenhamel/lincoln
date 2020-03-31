@@ -1,0 +1,22 @@
+/**
+ * Indicate if the background should use a solid color or gradient.
+ *
+ * @type Bool
+ */
+$USE_GRADIENT_BACKGROUND: true;
+
+/**
+ * Select the preferred intro style.
+ *
+ * @type String
+ * @option thumb - Uses the thumbnail layout for the introduction
+ * @option banner - Uses the banner layout for the introduction
+ */
+$INTRO_STYLE: thumb;
+
+/**
+ * Set the default size for the intro thumbnail.
+ *
+ * @type Number
+ */
+ $INTRO_THUMB_SIZE: 100px;

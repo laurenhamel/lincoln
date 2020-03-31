@@ -1,0 +1,49 @@
+// Use dependencies.
+@use '@utils/image' as image;
+@use '@utils/breakpoint' as breakpoint;
+@use '@utils/layout' as layout;
+@use '@config/vars' as vars;
+@use '@config/colors' as colors;
+
+// Define styles.
+.links {
+  $selector: &;
+  &.-feed {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint.breakpoint-before-layout {
+      @include layout.padding-x(vars.$rhythm-x);
+    };
+    #{$selector}-item {
+      margin: (vars.$rhythm-x / 2) 0;
+      background-color: colors.$card-background;
+      color: colors.$card-foreground;
+      border: vars.$width-s solid colors.$card-border;
+      border-radius: vars.$radius-m;
+      box-shadow: vars.$shadow-l;
+      overflow: hidden;
+      &-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        &-title {
+          margin: vars.$rhythm-y vars.$rhythm-x;
+          text-align: center;
+        }
+        &-image {
+          width: 100%;
+          height: calc(100vw - #{vars.$rhythm-x * 2});
+          @include image.fit;
+          @include breakpoint.breakpoint-after-layout {
+            height: vars.$layout-max;
+          };
+        }
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

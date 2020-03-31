@@ -1,0 +1,52 @@
+// Use dependencies.
+@use '@utils/image' as image;
+@use '@utils/breakpoint' as breakpoint;
+@use '@utils/layout' as layout;
+@use '@config/vars' as vars;
+@use '@config/colors' as colors;
+
+// Define styles.
+.links {
+  $selector: &;
+  &.-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include breakpoint.breakpoint-before-layout {
+      @include layout.padding-x(vars.$rhythm-x);
+    };
+    @include breakpoint.breakpoint-s {
+      padding: 0;
+      grid-gap: 0;
+    };
+    @include breakpoint.breakpoint-m-l {
+      grid-gap: vars.$rhythm-x;
+    };
+    #{$selector}-item {
+      overflow: hidden;
+      background-color: colors.$card-background;
+      color: colors.$card-foreground;
+      height: 0;
+      padding-bottom: 100%;
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        &-title {
+          display: none;
+        }
+        &-image {
+          width: 100%;
+          min-height: 100%;
+          @include image.fit;
+        }
+      }
+    }
+  }
+}

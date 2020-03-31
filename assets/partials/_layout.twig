@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{title}}</title>
+  <title>{{ brand.name }}</title>
   {% include('_head.twig') %}
 </head>
 <body>
-  {% block body %}{% endblock %}
+  <main id="app">
+    {% block body %}{% endblock %}
+  </main>
+  {% include('comps/_templates.twig') %}
   {% include('_foot.twig') %}
 </body>
 </html>

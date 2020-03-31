@@ -1,0 +1,2 @@
+// Export component.
+module.exports = {};

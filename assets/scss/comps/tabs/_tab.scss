@@ -1,0 +1,27 @@
+// Use dependencies.
+@use '@config/vars' as vars;
+@use '@config/colors' as colors;
+@use '@utils/font' as font;
+
+// Define styles.
+.tab {
+  $selector: &;
+  @include font.text('tab');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border-top: vars.$tab-border solid colors.$tab-border-inactive;
+  transition: vars.$transition-all;
+  height: vars.$tab-size;
+  margin-top: (vars.$tab-border * -1);
+  cursor: pointer;
+  &.is-active {
+    border-top: vars.$tab-border solid colors.$tab-border-active;
+  }
+  &-icon {
+    margin-right: (vars.$rhythm-x / 2);
+    color: colors.$tab-icon;
+  }
+  &-text {}
+}

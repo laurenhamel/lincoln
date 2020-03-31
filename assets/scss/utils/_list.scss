@@ -1,0 +1,42 @@
+// Use dependencies.
+@use 'sass:list';
+@use 'sass:meta';
+
+// Forward dependencies.
+@forward 'sass:list';
+
+// Convert a list to a string.
+@function glue($list, $glue: '', $nesting: false) {
+
+  $result: null;
+
+  @for $i from 1 through list.length($list) {
+
+    $e: list.nth($list, $i);
+
+    @if(meta.type-of($e) == 'list') {
+
+      $result: $result#{glue($e, $glue, true)};
+
+    }
+
+    @else {
+
+      @if($i != list.length($list)) { $result: $result#{$e}#{$glue}; }
+
+      @else { $result: $result#{$e}; }
+
+    }
+
+  }
+
+  @return $result;
+
+}
+
+// Prepend an item to a list.
+@function prepend($list, $item) {
+
+  @return list.join(($item), $list);
+
+}

@@ -1,0 +1,50 @@
+// Use dependencies.
+@use '@vends/breakpoint' as breakpoint;
+@use '@config/vars' as vars;
+
+// Forward dependencies.
+@forward '@vends/breakpoint';
+
+// Apply styles across breakpoints.
+@mixin breakpoints($breakpoints...) {
+  @each $breakpoint in $breakpoints {
+    @include breakpoint.breakpoint($breakpoint) {
+      @content;
+    };
+  }
+}
+@mixin breakpoint-s {
+  @include breakpoint.breakpoint(vars.$breakpoint-s) {
+    @content;
+  };
+}
+@mixin breakpoint-m {
+  @include breakpoint.breakpoint(vars.$breakpoint-m) {
+    @content;
+  };
+}
+@mixin breakpoint-l {
+  @include breakpoint.breakpoint(vars.$breakpoint-l) {
+    @content;
+  };
+}
+@mixin breakpoint-s-m {
+  @include breakpoints(vars.$breakpoint-s, vars.$breakpoint-m) {
+    @content;
+  };
+}
+@mixin breakpoint-m-l {
+  @include breakpoints(vars.$breakpoint-m, vars.$breakpoint-l) {
+    @content;
+  };
+}
+@mixin breakpoint-before-layout {
+  @include breakpoint.breakpoint(max-width vars.$layout-max) {
+    @content;
+  };
+}
+@mixin breakpoint-after-layout {
+  @include breakpoint.breakpoint(min-width (vars.$layout-max + 1)) {
+    @content;
+  };
+}

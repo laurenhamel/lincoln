@@ -46,17 +46,42 @@ class Lincoln {
 
     }
 
+    // Get static data.
+    $static = scandir_clean(CONFIG['ASSETS'].'/data');
+
+    // Read static data.
+    foreach($static as $i => $file) {
+
+      // Get full file path.
+      $path = CONFIG['ASSETS'].'/data/'.$file;
+
+      // Get the base filename.
+      $basename = basename($file, '.json');
+
+      // Read the static data and save it.
+      $static[$basename] = json_decode(file_get_contents($path), true);
+
+      // Remove the filename from the static array.
+      unset($static[$file]);
+
+    }
+
     // Get assets.
     $assets = [
       'css' => Assets::css(),
       'js' => Assets::js()
     ];
 
-    // Merge assets into data.
-    $data = [
+    // Merge all data.
+    $data = array_merge([
       'assets' => $assets,
-      'links' => $data
-    ];
+      'links' => $data,
+      'path' => [
+        'app' => CONFIG['URIROOT'].str_replace(CONFIG['ROOT'], '', CONFIG['APP']),
+        'assets' => CONFIG['URIROOT'].str_replace(CONFIG['ROOT'], '', CONFIG['ASSETS']),
+        'root' => CONFIG['URIROOT']
+      ]
+    ], $static);
 
     // Render the index page with the data.
     $this->engine->render($this->template, $data);

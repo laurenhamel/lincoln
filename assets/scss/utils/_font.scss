@@ -1,0 +1,68 @@
+// Use dependencies.
+@use 'sass:map';
+@use '@utils/list' as list;
+@use '@utils/string' as string;
+@use '@config/fonts' as fonts;
+
+// Create a size scale.
+@function scale ($min, $max, $stops: 3, $sort: 'ASC') {
+
+  // Calculate the stop width.
+  $width: ($max - $min) / ($stops - 1);
+
+  // Initialize the result.
+  $result: ();
+
+  // Generate the result.
+  @for $i from 0 through ($stops - 1) {
+
+    // Calculate the stop size.
+    $size: $min + ($i * $width);
+
+    // Save stop.
+    $result: if($sort == 'DESC', list.prepend($result, $size), list.append($result, $size));
+
+  }
+
+  // Return the result.
+  @return $result;
+
+}
+
+// Define heading font styles.
+@mixin heading($level: 1, $self: true) {
+  $heading-scale:  scale(fonts.$heading-size-min, fonts.$heading-size-max, 6, 'DESC');
+  $heading-selector: if($self, '&', ('h#{$level}', '.h#{$level}'));
+  #{list.glue($heading-selector, ', ')} {
+    font-family: fonts.$heading-font;
+    font-weight: fonts.$heading-weight;
+    font-size: list.nth($heading-scale, $level);
+  }
+}
+
+// Define text font styles.
+@mixin text($style: 'body') {
+  $_weights: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'regular': 400,
+    'normal': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'black': 900
+  );
+  @if($style == 'body') {
+    font-family: fonts.$body-font;
+    font-weight: map.get($_weights, fonts.$body-weight);
+    font-size: fonts.$body-size;
+  }
+  @else if($style == 'tab') {
+    font-family: fonts.$tab-font;
+    font-weight: map.get($_weights, fonts.$tab-weight);
+    font-size: fonts.$tab-size;
+    text-transform: uppercase;
+  }
+}

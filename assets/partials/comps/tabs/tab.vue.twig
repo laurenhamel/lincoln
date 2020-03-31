@@ -1,0 +1,12 @@
+<template id="lincoln-tab">
+  <li class="tabs-tab tab"
+      :class="{ 'has-icon': icon }"
+      @click="emit">
+      <span v-if="icon"
+            class="tab-icon icon"
+            :class="[ icon ]"></span>
+      <span class="tab-text">
+        ${label}
+      </span>
+  </li>
+</template>

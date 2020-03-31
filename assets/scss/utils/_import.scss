@@ -1,0 +1,65 @@
+// Use dependencies.
+@use 'sass:meta';
+@use 'sass:map';
+@use '@utils/list' as list;
+@use '@utils/string' as string;
+
+// Import a Google font.
+@mixin google-font($family, $weights: (regular), $styles: (normal)) {
+
+  // Define source.
+  $src: '//fonts.googleapis.com/css';
+
+  // Define weights.
+  $_weights: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'regular': 400,
+    'normal': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'black': 900
+  );
+
+  // Define styles.
+  $_styles: (
+    'normal': '',
+    'italic': 'i'
+  );
+
+  // Build parameters.
+  $_params: ();
+
+  // Build import.
+  $_import: '#{$src}?family=#{string.replace($family, ' ', '+')}';
+
+  // Make sure weights are given in the form of a list.
+  @if(meta.type-of($weights) != 'list') { $weights: ($weights); }
+
+  // Make sure styles are given in the form of a list.
+  @if(meta.type-of($styles) != 'list') { $styles: ($styles); }
+
+  // Build weight parameters.
+  @each $weight in $weights {
+    @each $style in $styles {
+
+      // Get the param value.
+      $param: map.get($_weights, $weight) + map.get($_styles, $style);
+
+      // Build out parameters.
+      $_params: list.append($_params, $param, comma);
+
+    }
+
+  }
+
+  // Add parameters to the import.
+  $_import: '#{$_import}:#{list.glue($_params, ',')}';
+
+  // Import google font.
+  @import url(string.quote($_import));
+
+}

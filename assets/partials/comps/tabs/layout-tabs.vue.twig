@@ -1,0 +1,21 @@
+<template id="lincoln-layout-tabs">
+  <lincoln-tabgroup event="layout"
+                    :tabs="[
+                      {
+                        icon: 'far fa-list-alt',
+                        label: 'List',
+                        payload: { mode: 'list' },
+                        default: true
+                      },
+                      {
+                        icon: 'fas fa-border-all',
+                        label: 'Grid',
+                        payload: { mode: 'grid' }
+                      },
+                      {
+                        icon: 'far fa-image',
+                        label: 'Feed',
+                        payload: { mode: 'feed' }
+                      }
+                    ]"></lincoln-tabgroup>
+</template>

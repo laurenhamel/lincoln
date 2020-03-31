@@ -1,7 +1,7 @@
 {% extends('_layout.twig') %}
 
-{% set title = 'Lincoln' %}
-
 {% block body %}
-<h1>Lincoln</h1>
+  {% include('comps/core/intro.twig') %}
+  {% include('comps/tabs/layout-tabs.twig') %}
+  {% include('comps/views/links.twig') %}
 {% endblock %}

@@ -1,0 +1,33 @@
+// Use dependencies.
+@use '@config/vars' as vars;
+
+// Apply max width to the page.
+@mixin max-width {
+  $_padding: calc((100% - #{vars.$layout-max}) / 2);
+  padding-left: $_padding;
+  padding-right: $_padding;
+}
+
+// Apply padding to the x axis.
+@mixin padding-x($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+// Apply padding to the y axis.
+@mixin padding-y($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+// Apply margin to the x axis.
+@mixin margin-x($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+// Apply margin to the y axis.
+@mixin margin-y($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}

@@ -1,0 +1,52 @@
+// Load dependencies.
+@use '@vends/normalize' as normalize;
+@use '@utils/list' as list;
+@use '@utils/font' as font;
+@use '@config/fonts' as fonts;
+@use '@config/colors' as colors;
+@use '@config/settings' as settings;
+@use '@config/vars' as vars;
+
+// Normalize styles.
+@include normalize.normalize();
+
+// Define styles.
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  @include font.text;
+  @if(settings.$USE_GRADIENT_BACKGROUND) {
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(160deg, colors.$gradient-start, colors.$gradient-end);
+    color: colors.$gradient-foreground;
+  }
+  @else {
+    background-color: colors.$background;
+    color: colors.$foreground;
+  }
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  appearance: none;
+}
+
+@for $i from 1 through 6 {
+  @include font.heading($i, false);
+}

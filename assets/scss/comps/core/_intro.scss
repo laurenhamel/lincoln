@@ -1,0 +1,54 @@
+// Use dependencies.
+@use '@config/settings' as settings;
+@use '@config/colors' as colors;
+@use '@config/vars' as vars;
+
+// Define styles.
+.intro {
+  $selector: &;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  @if(settings.$INTRO_STYLE == 'thumb') {
+    margin: vars.$rhythm-y vars.$rhythm-y;
+    &-banner {
+      display: none;
+    }
+  }
+  @else if(settings.$INTRO_STYLE == 'banner') {
+    padding: vars.$rhythm-y vars.$rhythm-y;
+    &-banner {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      &-image {
+        width: 100%;
+        min-height: 100%;
+        margin: auto;
+      }
+    }
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$intro-thumbnail;
+    width: settings.$INTRO_THUMB_SIZE;
+    height: settings.$INTRO_THUMB_SIZE;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: vars.$shadow-l;
+    &-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-title {
+    text-shadow: vars.$shadow-l;
+  }
+}

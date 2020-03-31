@@ -2,4 +2,20 @@
 RewriteEngine on
 
 # Direct all traffic to the index page.
+RewriteCond %{REQUEST_URI} !/public/(css|js|images|fonts|webfonts) [NC]
 RewriteRule (.*) index.php [L]
+
+# Register font mime types.
+<IfModule mod_mime.c>
+    AddType application/vnd.ms-fontobject    .eot
+    AddType application/x-font-opentype      .otf
+    AddType image/svg+xml                    .svg
+    AddType application/x-font-ttf           .ttf
+    AddType application/font-woff            .woff
+    AddType application/font-woff2           .woff2
+</IfModule>
+
+# Allow fonts to be accessed from anywhere.
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

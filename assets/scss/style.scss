@@ -1,0 +1,19 @@
+// Load vendors.
+@use '@vends/breakpoint' as breakpoint;
+@use '@vends/normalize' as normalize;
+@use '@vends/fontawesome' as fontawesome;
+
+// Load utilities.
+@use '@utils/_master' as utils;
+
+// Load configurations.
+@use '@config/settings' as settings;
+@use '@config/colors' as colors;
+@use '@config/fonts' as fonts;
+@use '@config/vars' as vars;
+
+// Load components.
+@use '@comps/_master' as comps;
+
+// Load core.
+@use '@core/_master' as core;

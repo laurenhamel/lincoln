@@ -11,6 +11,8 @@ define('CONFIG', [
 
   'ROOT' => ($ROOT = dirname($APP)),
 
+  'URIROOT' => '/'.str_replace($_SERVER['DOCUMENT_ROOT'], '', $ROOT),
+
   'ASSETS' => $ROOT.'/public',
 
   'AIRTABLE' => [

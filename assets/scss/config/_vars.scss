@@ -1,0 +1,42 @@
+// Use dependencies.
+@use '@config/colors' as colors;
+
+// Define breakpoints.
+$breakpoint-s: max-width 400px;
+$breakpoint-m: 900px 401px;
+$breakpoint-l: min-width 901px;
+
+// Define layout.
+$layout-max: 900px;
+
+// Define rhythm.
+$rhythm-x: 20px;
+$rhythm-y: 40px;
+
+// Define transitions.
+$transition-timing: ease;
+$transition-duration: .25s;
+$transition-all: all $transition-duration $transition-timing;
+
+// Define shadow.
+$shadow-l: 1px 2px 5px rgba(colors.$shadow, .25);
+$shadow-d: 2px 3px 8px rgba(colors.$shadow, .5);
+
+// Define border radiuses.
+$radius-r: 100%;
+$radius-s: 2px;
+$radius-m: 5px;
+$radius-l: 10px;
+
+// Define border widths.
+$width-s: 1px;
+$width-m: 2px;
+$width-l: 5px;
+
+// Define cards.
+$card-list-min: 75px;
+$card-list-max: 150px;
+
+// Define tabs.
+$tab-border: $width-m;
+$tab-size: 60px;

@@ -1,0 +1,9 @@
+// Use dependencies.
+// ...
+
+// Fit images within their container.
+@mixin fit($fit: cover, $position: center) {
+  object-fit: $fit;
+  object-position: $position;
+  font-family: 'object-fit: #{$fit}; object-position: #{$position};';
+}

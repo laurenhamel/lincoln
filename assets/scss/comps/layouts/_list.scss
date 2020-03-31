@@ -1,0 +1,62 @@
+// Use dependencies.
+@use '@utils/image' as image;
+@use '@utils/breakpoint' as breakpoint;
+@use '@utils/font' as font;
+@use '@utils/layout' as layout;
+@use '@config/vars' as vars;
+@use '@config/colors' as colors;
+
+// Define styles.
+.links {
+  $selector: &;
+  &.-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint.breakpoint-before-layout {
+      @include layout.padding-x(vars.$rhythm-x);
+    };
+    #{$selector}-item {
+      overflow: hidden;
+      background-color: colors.$card-background;
+      color: colors.$card-foreground;
+      border: vars.$width-s solid colors.$card-border;
+      border-radius: vars.$radius-m;
+      box-shadow: vars.$shadow-l;
+      margin: (vars.$rhythm-x / 2) 0;
+      height: vars.$card-list-min;
+      @include breakpoint.breakpoint-m-l {
+        height: vars.$card-list-max;
+      };
+      &-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        &-title {
+          order: 2;
+          padding: (vars.$rhythm-y / 2) vars.$rhythm-x;
+          @include font.heading(6);
+          font-weight:  normal !important;
+          @include breakpoint.breakpoint-m-l {
+            @include font.heading(4);
+            margin-left: vars.$rhythm-x;
+          }
+        }
+        &-image {
+          order: 1;
+          flex-shrink: 0;
+          width: vars.$card-list-min;
+          min-height: 100%;
+          @include image.fit;
+          @include breakpoint.breakpoint-m-l {
+            width: vars.$card-list-max;
+          }
+        }
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

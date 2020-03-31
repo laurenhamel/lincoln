@@ -1,0 +1,9 @@
+<template id="lincoln-tabgroup">
+  <ul class="tabs">
+    <lincoln-tab v-for="(tab, index) in tabs"
+                 :key="index"
+                 v-bind="tab"
+                 :event="event"
+                 :class="{ 'is-active': selected === index }">
+  </ul>
+</template>

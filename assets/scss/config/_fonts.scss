@@ -1,0 +1,22 @@
+// Use dependencies.
+@use '@utils/import' as import;
+
+// Load fonts.
+@include import.google-font('Open Sans', normal semi-bold bold);
+@include import.google-font('Roboto', normal);
+
+// Configure typography.
+$heading-font: ('Open Sans', sans-serif);
+$body-font: ('Roboto', sans-serif);
+$tab-font: ('Open Sans', sans-serif);
+
+// Set base font size.
+$heading-size-min: 1em;
+$heading-size-max: 2em;
+$body-size: 16px;
+$tab-size: 14px;
+
+// Set base font weight.
+$heading-weight: bold;
+$body-weight: normal;
+$tab-weight: semi-bold;

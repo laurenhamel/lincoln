@@ -1,0 +1,21 @@
+// Use dependencies.
+@use '@config/vars' as vars;
+@use '@config/colors' as colors;
+@use '@utils/layout' as layout;
+
+// Define styles.
+.tabs {
+  $selector: &;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-top: vars.$tab-border solid colors.$tab-border-inactive;
+  height: vars.$tab-size;
+  background-color: colors.$tab-background;
+  color: colors.$tab-foreground;
+  @include layout.max-width;
+}

@@ -1,0 +1,7 @@
+// Use dependencies.
+@use '@config/vars' as vars;
+
+// Define styles.
+.tabs.-layout {
+  $selector: &;
+}
