@@ -37,4 +37,4 @@ grunt build:dev
 grunt build:prod
 ```
 
-- Start adding links into your AirTable base, include a link to your project in all your socials, and enjoy!
+- Finally, add links into your AirTable base, include a link to a hosted version of your project in all your socials, and enjoy!
