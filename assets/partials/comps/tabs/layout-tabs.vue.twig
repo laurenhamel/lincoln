@@ -5,17 +5,19 @@
                         icon: 'far fa-list-alt',
                         label: 'List',
                         payload: { mode: 'list' },
-                        default: true
+                        default: {% if settings.layout == 'list' %}true{% else %}false{% endif %}
                       },
                       {
                         icon: 'fas fa-border-all',
                         label: 'Grid',
-                        payload: { mode: 'grid' }
+                        payload: { mode: 'grid' },
+                        default: {% if settings.layout == 'grid' %}true{% else %}false{% endif %}
                       },
                       {
                         icon: 'far fa-image',
                         label: 'Feed',
-                        payload: { mode: 'feed' }
+                        payload: { mode: 'feed' },
+                        default: {% if settings.layout == 'feed' %}true{% else %}false{% endif %}
                       }
                     ]"
                     class="-layout"></lincoln-tabgroup>

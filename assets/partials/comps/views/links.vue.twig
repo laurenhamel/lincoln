@@ -1,41 +1,15 @@
 <template id="lincoln-links">
   <lincoln-linkgroup :links="[
-                       {
-                         label: 'Veniam Anim Legam Dolore',
-                         link: '',
-                         redirect: mode !== 'grid',
-                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
-                       },
-                       {
-                         label: 'Veniam Anim Legam Dolore',
-                         link: '',
-                         redirect: mode !== 'grid',
-                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
-                       },
-                       {
-                         label: 'Veniam Anim Legam Dolore',
-                         link: '',
-                         redirect: mode !== 'grid',
-                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
-                       },
-                       {
-                         label: 'Veniam Anim Legam Dolore',
-                         link: '',
-                         redirect: mode !== 'grid',
-                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
-                       },
-                       {
-                         label: 'Veniam Anim Legam Dolore',
-                         link: '',
-                         redirect: mode !== 'grid',
-                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
-                       },
-                       {
-                         label: 'Veniam Anim Legam Dolore',
-                         link: '',
-                         redirect: mode !== 'grid',
-                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
-                       }
+                       {% for link in links %}
+                        {% if link.fields.Title and link.fields.Link %}
+                         {
+                           label: '{{ link.fields.Title }}',
+                           link: '//{{ link.fields.Link }}',
+                           redirect: mode !== '{{ settings.layout }}',
+                           placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                         },
+                        {% endif %}
+                       {% endfor %}
                      ]"
                      :class="[ '-' + mode ]"></lincoln-linkgroup>
 </template>

@@ -1,3 +1,4 @@
 {
-  "placeholder": "images/placeholder.jpg"
+  "placeholder": "images/placeholder.jpg",
+  "layout": "list"
 }
