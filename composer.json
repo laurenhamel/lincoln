@@ -1,5 +1,5 @@
 {
-  "name": "laurenhamel/lincoln",
+  "name": "laurenhamel/linkn",
   "description": "A link in bio launchpad powered by Airtable",
   "version": "1.0.0",
   "keywords": [
@@ -7,7 +7,7 @@
     "link-to",
     "airtable"
   ],
-  "homepage": "https://github.com/laurenhamel/lincoln",
+  "homepage": "https://github.com/laurenhamel/linkn",
   "license": "MIT",
   "authors": [
     {
@@ -18,8 +18,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/laurenhamel/lincoln/issues",
-    "source": "https://github.com/laurenhamel/lincoln"
+    "issues": "https://github.com/laurenhamel/linkn/issues",
+    "source": "https://github.com/laurenhamel/linkn"
   },
   "require": {
     "twig/twig": "^3.0",

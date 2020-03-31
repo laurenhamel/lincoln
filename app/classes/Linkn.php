@@ -1,7 +1,7 @@
 <?php
 
 // Build class.
-class Lincoln {
+class Linkn {
 
   // Initialize cache.
   protected $cache;

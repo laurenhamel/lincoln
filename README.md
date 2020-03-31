@@ -1,4 +1,4 @@
-# Lincoln
+# Linkn
 
 > A link in bio launchpad powered by Airtable
 
@@ -7,7 +7,7 @@
 - Clone the repository.
 
   ```bash
-  git clone git@github.com:laurenhamel/lincoln.git
+  git clone git@github.com:laurenhamel/linkn.git
   ```
 
 - Install dependencies.
@@ -18,14 +18,15 @@
 
 - Create an [AirTable](https://airtable.com/) base to store your links. If using the default configurations, then make sure your AirTable contains columns named `Title` and `Link` for the link name and URL, respectively.
 
-- Setup your `.env` file. See [`.env.example`](https://github.com/laurenhamel/lincoln/blob/master/.env.example) for help.
+- Setup your `.env` file. See [`.env.example`](https://github.com/laurenhamel/linkn/blob/master/.env.example) for help.
 
 - Further customize your project by:
 
   - Replacing any default images found in `assets/images` with your own.
   - Adding your brand details in `assets/data/brand.json`.
   - Tweaking the project settings in `assets/data/settings.json`.
-  - Configuring your project's styles in `assets/scss/config/*.scss`;
+  - Configuring your project's styles in `assets/scss/config/*.scss`.
+  - Continuing to build out the project to fit your needs!
 
 - Build the project.
 

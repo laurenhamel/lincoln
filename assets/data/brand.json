@@ -1,15 +1,15 @@
 {
-  "name": "Lincoln",
+  "name": "Linkn",
   "logo": "images/logo.svg",
   "banner": "images/banner.jpg",
   "favicon": "images/favicon.png",
-  "website": "//github.com/laurenhamel/lincoln",
-  "bio": "Lincoln is an open-source link in bio launchpad that extracts link data from an Airtable base and renders it here for the world to access. For more information about this project, please visit the links below.",
+  "website": "//github.com/laurenhamel/linkn",
+  "bio": "Linkn is an open-source link in bio launchpad that extracts link data from an Airtable base and renders it here for the world to access. For more information about this project, please visit the links below.",
   "socials": [
     {
       "name": "GitHub",
       "icon": "github",
-      "url": "//github.com/laurenhamel/lincoln"
+      "url": "//github.com/laurenhamel/linkn"
     }
   ]
 }

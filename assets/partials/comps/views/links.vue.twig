@@ -1,5 +1,5 @@
-<template id="lincoln-links">
-  <lincoln-linkgroup :links="[
+<template id="linkn-links">
+  <linkn-linkgroup :links="[
                        {% for link in links %}
                         {% if link.fields.Title and link.fields.Link %}
                          {
@@ -11,5 +11,5 @@
                         {% endif %}
                        {% endfor %}
                      ]"
-                     :class="[ '-' + mode ]"></lincoln-linkgroup>
+                     :class="[ '-' + mode ]"></linkn-linkgroup>
 </template>

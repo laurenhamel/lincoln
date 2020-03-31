@@ -10,7 +10,7 @@ require __DIR__.'/classes/autoload.php';
 require __DIR__.'/libraries/autoload.php';
 
 // Initialize the app.
-$app = new Lincoln();
+$app = new Linkn();
 
 // Build the app.
 $app->build();

@@ -4,7 +4,7 @@ const Vue = require('vue').default;
 const _ = require('lodash');
 
 // Define component namespace.
-const namespace = 'lincoln';
+const namespace = 'linkn';
 
 // Configure Vue.
 Vue.options.delimiters = ['${', '}'];

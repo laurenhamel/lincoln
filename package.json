@@ -1,5 +1,5 @@
 {
-  "name": "lincoln",
+  "name": "linkn",
   "version": "0.1.0",
   "description": "A link in bio launchpad powered by Airtable",
   "main": "index.js",
@@ -8,9 +8,9 @@
     "link-to",
     "airtable"
   ],
-  "repository": "github:laurenhamel/lincoln",
-  "homepage": "https://github.com/laurenhamel/lincoln",
-  "bugs": "https://github.com/laurenhamel/issues",
+  "repository": "github:laurenhamel/linkn",
+  "homepage": "https://github.com/laurenhamel/linkn",
+  "bugs": "https://github.com/laurenhamel/linkn/issues",
   "author": "Lauren Hamel",
   "license": "MIT",
   "devDependencies": {
