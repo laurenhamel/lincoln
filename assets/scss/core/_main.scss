@@ -13,22 +13,28 @@
 // Define styles.
 html {
   width: 100%;
-  min-height: 100%;
+  @if(settings.$USE_GRADIENT_BACKGROUND) {
+    height: 100%;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(160deg, colors.$gradient-start, colors.$gradient-end);
+    background-attachment: fixed;
+  }
+  @else {
+    min-height: 100%;
+    background-color: colors.$background;
+  }
 }
 
 body {
   margin: 0 auto;
   width: 100%;
   @include font.text;
-  @if(settings.$USE_GRADIENT_BACKGROUND) {
-    background-position: center center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(160deg, colors.$gradient-start, colors.$gradient-end);
+  @if(settings.$USE_GRADIENT_BACKGROUND ) {
     color: colors.$gradient-foreground;
   }
   @else {
-    background-color: colors.$background;
     color: colors.$foreground;
   }
 }

@@ -1,37 +1,41 @@
 <template id="lincoln-links">
-  <ul class="links"
-      :class="[ '-' + mode ]">
-    <li class="links-item">
-      <a href="" class="links-item-link">
-        <h2 class="links-item-link-title">Veniam Anim Legam Dolore</h2>
-        <img class="links-item-link-image" src="//source.unsplash.com/random">
-      </a>  </li>
-    <li class="links-item">
-      <a href="" class="links-item-link">
-        <h2 class="links-item-link-title">Veniam Anim Legam Dolore</h2>
-        <img class="links-item-link-image" src="//source.unsplash.com/random">
-      </a>  </li>
-    <li class="links-item">
-      <a href="" class="links-item-link">
-        <h2 class="links-item-link-title">Veniam Anim Legam Dolore</h2>
-        <img class="links-item-link-image" src="//source.unsplash.com/random">
-      </a>
-    </li>
-    <li class="links-item">
-      <a href="" class="links-item-link">
-        <h2 class="links-item-link-title">Veniam Anim Legam Dolore</h2>
-        <img class="links-item-link-image" src="//source.unsplash.com/random">
-      </a>
-    </li>
-    <li class="links-item">
-      <a href="" class="links-item-link">
-        <h2 class="links-item-link-title">Veniam Anim Legam Dolore</h2>
-        <img class="links-item-link-image" src="//source.unsplash.com/random">
-      </a>  </li>
-    <li class="links-item">
-      <a href="" class="links-item-link">
-        <h2 class="links-item-link-title">Veniam Anim Legam Dolore</h2>
-        <img class="links-item-link-image" src="//source.unsplash.com/random">
-      </a>  </li>
-  </ul>
+  <lincoln-linkgroup :links="[
+                       {
+                         label: 'Veniam Anim Legam Dolore',
+                         link: '',
+                         redirect: mode !== 'grid',
+                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                       },
+                       {
+                         label: 'Veniam Anim Legam Dolore',
+                         link: '',
+                         redirect: mode !== 'grid',
+                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                       },
+                       {
+                         label: 'Veniam Anim Legam Dolore',
+                         link: '',
+                         redirect: mode !== 'grid',
+                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                       },
+                       {
+                         label: 'Veniam Anim Legam Dolore',
+                         link: '',
+                         redirect: mode !== 'grid',
+                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                       },
+                       {
+                         label: 'Veniam Anim Legam Dolore',
+                         link: '',
+                         redirect: mode !== 'grid',
+                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                       },
+                       {
+                         label: 'Veniam Anim Legam Dolore',
+                         link: '',
+                         redirect: mode !== 'grid',
+                         placeholder: '{{ path.assets }}/{{ settings.placeholder }}'
+                       }
+                     ]"
+                     :class="[ '-' + mode ]"></lincoln-linkgroup>
 </template>

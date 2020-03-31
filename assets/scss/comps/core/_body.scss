@@ -1,0 +1,9 @@
+// Use dependencies.
+@use '@config/colors' as colors;
+
+// Define styles.
+.body {
+  $selector: &;
+  flex-grow: 1;
+  background-color: colors.$body-background;
+}

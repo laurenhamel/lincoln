@@ -2,6 +2,7 @@
 @use '@utils/image' as image;
 @use '@utils/breakpoint' as breakpoint;
 @use '@utils/layout' as layout;
+@use '@utils/font' as font;
 @use '@config/vars' as vars;
 @use '@config/colors' as colors;
 
@@ -22,15 +23,19 @@
       border-radius: vars.$radius-m;
       box-shadow: vars.$shadow-l;
       overflow: hidden;
-      &-link {
+      &:first-child {
+        margin-top: 0;
+      }
+      .link {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         color: inherit;
-        &-title {
+        &-label {
           margin: vars.$rhythm-y vars.$rhythm-x;
           text-align: center;
+          @include font.heading(3);
         }
         &-image {
           width: 100%;
@@ -40,9 +45,6 @@
             height: vars.$layout-max;
           };
         }
-      }
-      &:first-child {
-        margin-top: 0;
       }
     }
   }

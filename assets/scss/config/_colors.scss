@@ -19,6 +19,9 @@ $background: $turquoise;
 $foreground: $text-light;
 $shadow: $magenta;
 
+// Body
+$body-background: rgba($white, .5);
+
 // Gradient
 $gradient-start: $turquoise;
 $gradient-end: $gold;
@@ -31,9 +34,6 @@ $card-border: $grey;
 
 // Intro
 $intro-thumbnail: $white;
-
-// Links
-$links-background: rgba($white, .5);
 
 // Tabs
 $tab-background: rgba($white, .75);

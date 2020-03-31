@@ -1,10 +1,13 @@
 // Load core components.
 @forward '@comps/core/intro';
+@forward '@comps/core/body';
 
 // Load utility components.
 @forward '@comps/tabs/tab';
 @forward '@comps/tabs/tabgroup';
 @forward '@comps/tabs/layout-tabs';
+@forward '@comps/links/link';
+@forward '@comps/links/linkgroup';
 
 // Load view components.
 @forward '@comps/views/links';

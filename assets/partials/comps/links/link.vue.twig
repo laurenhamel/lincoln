@@ -1,0 +1,10 @@
+<template id="lincoln-link">
+  <li class="links-item">
+    <a :href="redirect ? link : false"
+       class="link"
+       @click="preview">
+      <span class="link-label" v-html="label"></span>
+      <img class="link-image" :src="image || placeholder">
+    </a>
+  </li>
+</template>

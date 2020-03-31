@@ -1,0 +1,7 @@
+<template id="lincoln-linkgroup">
+  <ul class="links">
+    <lincoln-link v-for="(link, index) in links"
+                  :key="index"
+                  v-bind="link"></lincoln-link>
+  </ul>
+</template>
